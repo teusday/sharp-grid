@@ -1,0 +1,26 @@
+{
+  "name": "sharp-grid",
+  "version": "0.0.1",
+  "homepage": "https://github.com/teusday/sharp-grid",
+  "authors": [
+    "teusday <macmaster195@gmail.com>"
+  ],
+  "description": "Polymer-friendly grid system",
+  "main": "sharp-grid.html",
+  "keywords": [
+    "grid",
+    "Polymer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "dependencies": {
+    "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior",
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+}
