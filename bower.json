@@ -19,8 +19,8 @@
     "test",
     "tests"
   ],
-    "dependencies": {
+    "dependencies": [
     "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior",
     "polymer": "Polymer/polymer#^1.0.0"
-  },
+  ],
 }
