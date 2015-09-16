@@ -12,41 +12,27 @@
             .grid-rectangle {
                 width: 200px;
                 height: 267px;
+                padding: 4px;
+                margin-bottom: 4px;
+            }
+            
+            .image-box-container {
+                background-color: beige;
             }
             
             .text-box-container {
-             background-color: lightslategray;
+                background-color: lightslategray;
             }
             
             .image-box {
-                width: inherit;
+                width: auto;
                 height: 75%;
             }
             
             .text-box {
-                width: inherit;
+                width: auto;
                 height: 75%;
                 overflow: scroll;
-            }
-            
-            .text-box(.is-scrolled:not(:first-child))::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 1px;
-                background: var(--divider-color);
-            }
-            
-            .text-box(.can-scroll:not(.scrolled-to-bottom):not(:last-child))::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 1px;
-                background: var(--divider-color);
             }
             
             @media (max-width: 600px) {
@@ -64,7 +50,7 @@
             </div>
         </template>
         <template is="dom-if" if="{{image}}">
-            <div class="grid-rectangle" id="foo">
+            <div class="grid-rectangle image-box-container">
                 <img class="image-box" src="{{image}}" alt="{{alt}}">
                 <div>{{footer}}</div>
             </div>
@@ -125,8 +111,7 @@
             };
 
             var z = document.getElementsByClassName("text-box");
-            for (var i = 0; i < z.length; i++) {
-            };
+            for (var i = 0; i < z.length; i++) {};
         }
     });
 

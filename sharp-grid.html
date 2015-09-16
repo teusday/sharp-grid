@@ -52,11 +52,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         },
 
-        _calculateColumns: function(itemWidth) {
-            a = Math.floor(this.getBoundingClientRect().width / itemWidth);
-            return a;
-        },
-
         _logThatStuffDebugging: function() {
             x = "You could fit " + this._calculateColumns(this.optimalWidth) + " columns with an optimal width of " + this.optimalWidth + ".";
             console.log(x);
