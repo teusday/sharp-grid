@@ -33,6 +33,7 @@
                 width: auto;
                 height: 75%;
                 overflow: scroll;
+                background-color: antiquewhite;
             }
             
             @media (max-width: 600px) {
@@ -101,12 +102,12 @@
             }
 
             var y = document.getElementsByClassName("image-box");
-            console.log("sharp-image [0]:" + document.getElementsByClassName("image-box")[0]);
-            var foo = document.getElementsByClassName("image-box")[0].style;
-            console.log("foo:" + foo);
+//            console.log("sharp-image [0]:" + document.getElementsByClassName("image-box")[0]);
+//            var foo = document.getElementsByClassName("image-box")[0].style;
+//            console.log("foo:" + foo);
             for (var i = 0; i < y.length; i++) {
                 y[i].style.height = contentHeight;
-                console.log(contentHeight);
+//                console.log(contentHeight);
                 y[i].style.width = parent.optimalWidth;
             };
 
