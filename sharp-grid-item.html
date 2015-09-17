@@ -31,6 +31,7 @@
             }
             
             .text-box {
+                padding-top: 4px;
                 width: auto;
                 height: 75%;
                 overflow: scroll;
@@ -71,18 +72,19 @@
 
         properties: {
 
+            //Image is the tag used to specify which image should be placed in the top portion. !Image and Text don't work together!
             image: {
                 type: String,
                 value: false
             },
-
-            alt: String,
-
+            
+            //Text is the tag used to specify what text should be contained in the top portion. !Image and Text don't work together!
             text: {
                 type: String,
                 value: false
             },
 
+            //Footer is the lower portion
             footer: String,
 
         },
