@@ -39,22 +39,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         properties: {
 
+            //optimalWidth is the size you would like your grid to be. Default: 200px
             optimalWidth: {
                 type: Number,
                 value: 200
             },
 
-
-            lineCount: {
-                type: String,
-                value: "zero"
-            },
-
         },
-
-        _logThatStuffDebugging: function() {
-            x = "You could fit " + this._calculateColumns(this.optimalWidth) + " columns with an optimal width of " + this.optimalWidth + ".";
-            console.log(x);
         }
     });
 
