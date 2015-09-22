@@ -1,7 +1,7 @@
 <link rel="import" href="sharp-grid.html">
+<!--<link rel="import" href="../vibrant/">-->
 <link rel="import" href="../paper-styles/paper-styles.html">
-<!--<link rel="import" href="../../bower_components/vibrant/">-->
-<script src="../vibrant/dist/Vibrant.min.js"></script>
+<script src="../../bower_components/vibrant/dist/Vibrant.min.js"></script>
 
 <dom-module id="sharp-grid-item">
     <template>
@@ -46,15 +46,14 @@
 
         </style>
         <template is="dom-if" if="{{text}}">
-            <div class="grid-rectangle text-box-container">
+            <div class="grid-rectangle text-box-container" on-click="clicked">
                 <div class="text-box">{{text}}</div>
-                <!--                <paper-dialog-scrollable class="text-box">{{text}}</paper-dialog-scrollable>-->
                 <div>{{footer}}</div>
             </div>
         </template>
         <template is="dom-if" if="{{image}}">
-            <div class="grid-rectangle image-box-container">
-                <img class="image-box" src="{{image}}" alt="{{alt}}">
+            <div class="grid-rectangle image-box-container" on-click="clicked">
+                <img class="image-box" src="{{image}}">
                 <div>{{footer}}</div>
             </div>
         </template>
@@ -77,13 +76,13 @@
                 type: String,
                 value: false
             },
-            
+
+            alt: String,
             //Text is the tag used to specify what text should be contained in the top portion. !Image and Text don't work together!
             text: {
                 type: String,
                 value: false
             },
-
             //Footer is the lower portion
             footer: String,
 
@@ -105,17 +104,21 @@
             }
 
             var y = document.getElementsByClassName("image-box");
-//            console.log("sharp-image [0]:" + document.getElementsByClassName("image-box")[0]);
-//            var foo = document.getElementsByClassName("image-box")[0].style;
-//            console.log("foo:" + foo);
+            //            console.log("sharp-image [0]:" + document.getElementsByClassName("image-box")[0]);
+            //            var foo = document.getElementsByClassName("image-box")[0].style;
+            //            console.log("foo:" + foo);
             for (var i = 0; i < y.length; i++) {
                 y[i].style.height = contentHeight;
-//                console.log(contentHeight);
+                //                console.log(contentHeight);
                 y[i].style.width = parent.optimalWidth;
             };
 
             var z = document.getElementsByClassName("text-box");
             for (var i = 0; i < z.length; i++) {};
+        },
+
+        clicked: function(e) {
+            this.fire("gridClick", e);
         }
     });
 
